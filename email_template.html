@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({
+      selector: 'textarea',
+      plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table contextmenu paste code textcolor'
+      ],
+      toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist forecolor backcolor outdent indent | link image',
+    });</script>
+  </head>
+  <body>
+    <form action="email.php" method="post">
+      <textarea name="Text">Enter the text for the alert here.</textarea>
+      <select name="Location"
+      style="float:left;clear:left;margin-top:12px;">
+        <option selected="selected" disabled="disabled"
+        value="Location">Location</option>
+        <option value="North_America">North America</option>
+        <option value="Europe">Europe</option>
+      </select>
+      <select name="Alert_Level"
+      style="float:left;clear:left;margin-top:12px;">
+        <option selected="selected" disabled="disabled" value="Alert
+        Level">Alert Level</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <input type="submit" value="Submit"
+      style="float:left;clear:left;margin-top:12px">
+    </form>
+  </body>
+</html>
